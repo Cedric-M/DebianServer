@@ -1,0 +1,596 @@
+/* 
+  -- Base commune √† la DOC --
+  http://-STATIC-/css/doc-general.css
+  Commun √† tous les sites ( Ubuntu / Kubuntu / Xubuntu / Edubuntu )
+
+  les '../images' sont en relatif sur http://-STATIC-/images/
+
+  v0.1 - 13/06/2010 - McPeter
+  v0.2 - 19/02/2011 - McPeter
+*/
+
+body{
+  background-repeat:repeat-x;
+  counter-reset : titrepage menus sousmenus soussousmenus section soussection soussoussection paragraphe sousparagraphe;
+}
+textarea, input, select{ font-size:1em; }
+h1{ font-size:1.75em; }
+h2{ font-size:1.5em; }
+h3{ font-size:1.25em; }
+h4{ font-size:1em; }
+
+    #navbar{
+      margin:0 0 0 16em;
+      background:#f6f6f6 url('../images/commun/menu_c.png') bottom left repeat-x;
+      border:1px solid #BEC0C0;
+      border-bottom-width:0px;
+      border-radius:5px 5px 0 0;
+      -moz-border-radius:5px 5px 0 0;
+      -o-border-radius:5px 5px 0 0;
+      -khtml-border-radius:5px 5px 0 0;
+      /* Chrome - Safari */
+      -webkit-border-top-right-radius:5px;
+      -webkit-border-top-left-radius:5px;
+    }
+      #navbar p{
+        margin:0; padding:1px 0 1px 20px;
+      }
+
+    #hidemenu{
+      position:relative; left:-1em;
+      margin:-2.7em 0 0 0;
+      width:21px; height:12px;
+      background:transparent url('../images/commun/bt_open_close.png') 50% 13px repeat-y;
+      cursor:pointer;
+    }
+
+    #main{
+      margin-left:16em; padding:1em;
+      min-width:670px;
+      background-color:#FFF;
+      border:1px solid #BEC0C0;
+      border-top-width:0px;
+      border-radius:0 0 5px 5px;
+      -moz-border-radius:0 0 5px 5px;
+      -o-border-radius:0 0 5px 5px;
+      -khtml-border-radius:0 0 5px 5px;
+      /* Chrome - Safari */
+      -webkit-border-bottom-right-radius:5px;
+      -webkit-border-bottom-left-radius:5px;
+    }
+      #main h1{
+        margin-left:0.2em;
+        padding-left:48px;
+        background-position:0 0;
+        background-repeat:repeat-x;
+        min-height:31px;
+        border:1px none transparent;
+        border-radius:8px 0 0 0;
+        -moz-border-radius:8px 0 0 0;
+        -o-border-radius:8px 0 0 0;
+        -khtml-border-radius:8px 0 0 0;
+        /* Chrome - Safari */
+        -webkit-border-top-left-radius:8px;
+      }
+      #main h1{
+      }
+      #main h1:after{
+        display:block;
+        content:'';
+        margin:0 0 0 -48px;
+        height:35px;
+        background-position:top left;
+        background-repeat:repeat-x;
+      }
+      #main h1:before{
+        position:absolute;
+        margin-top:-2px; margin-left:-51px;
+        content:'';
+        width:48px; height:48px;
+        background-position:top left;
+        background-repeat:no-repeat;
+      }
+        #main h1 a{
+    
+        }
+      #main h1{
+      }
+        #main h1 a, #main h2 a, #main h3 a, #main h4 a{
+          text-decoration:none;
+        }
+      #main h2{
+        padding-top:1em;
+      }
+        #main h2 a{
+          position:relative;
+        }
+
+      #pagetitle{
+        margin:0; padding:0 0 5px 20px;
+      }
+
+      .secedit{
+        float:right;
+        margin-top:-1em;
+      }
+        .btn_secedit .button{ /* Bouton √©diter des pages */
+          padding-left:22px;
+          width:54px; height:19px;
+          background:transparent url('../images/commun/edit.png') 0 19px repeat-y;
+          border:0 none #FFF;
+          text-align:right;
+          font-size:0.74em;
+          cursor:pointer;
+        }
+          .btn_secedit .button:hover{ 
+            background-position:0 0;
+            font-weight:bold;
+          }
+
+      #pageinfo{
+        text-align:right;
+        font-size:0.8em;
+        line-height:1em;
+      }
+      #pagerror{
+        margin-top:1.8em;
+      }
+        div.error{
+          background-position:0.5em 2px;
+        }
+
+    #footer{
+      margin:0 0 1em 15em;
+      background:#f6f6f6 url('../images/commun/menu_c.png') bottom left repeat-x;
+      border:1px solid #BEC0C0;
+      border-top-width:0px;
+      border-radius:0 0 5px 5px;
+      -moz-border-radius:0 0 5px 5px;
+      -o-border-radius:0 0 5px 5px;
+      -khtml-border-radius:0 0 5px 5px;
+      /* Chrome - Safari */
+      -webkit-border-bottom-right-radius:5px;
+      -webkit-border-bottom-left-radius:5px;
+
+    }
+
+
+    #references-ufr{
+      margin:0 0 1em 15em;
+    }
+      #references-ufr:after{ content:''; display:block; clear:both; }
+        #references-ufr ul{
+          margin:0 2em; padding:0;
+        }
+          #references-ufr li{
+            display:inline;
+            padding:0;
+          }
+
+        #legal-ufr{
+          float:left;
+          padding-top:2px;
+          font-size:0.8em;
+        }
+            #legal-ufr a{ margin:0 0.2em; }
+            #legal-ufr li:before{ content:'|'; }
+            #legal-ufr li:first-child:before{ content:''; }
+
+        #sponsors-ufr{
+          float:none;
+          margin:0 0 0 auto;
+          min-width:50%;
+          text-align:right;
+        }
+          #dokuwiki{
+            padding:15px 0 0;
+            display:block;
+            float:right;
+            width:80px; height:0;
+            background:transparent url('../images/doc/dokuwiki_logo.png') top left no-repeat;
+            overflow:hidden;
+          }
+
+hr{
+  color:#DEC28A;
+}
+
+.leftalign{ text-align:left; }
+
+
+/* TABLEAUX */
+table{
+  margin:1em auto 0; padding:0;
+  border-collapse:collapse;
+}
+
+  .inline tr{
+    background-position:top left;
+    background-repeat:repeat-y;
+  }
+    .inline th{
+
+    }
+    .inline th:first-child{
+      background-color:transparent;
+    }
+    .inline tr:first-child th:first-child{
+      background-repeat:no-repeat;
+
+    }
+    .inline th:last-child{
+      background-position:top right;
+      background-repeat:repeat-y;
+    }
+    .inline tr:first-child th:last-child:before{
+      display:block;
+      position:relative; top:3px; right:-0.4em;
+      content:'';
+      margin:-5px 0 0 auto;
+      width:5px; height:5px;
+    }
+      .inline tr:first-child td+th:last-child:before{
+        top:0; margin-top:-6px;
+      }
+    th{
+      padding:2px 0.4em;
+    }
+    td{
+      padding:5px 0.4em;
+      background-color:#F3F3F3;
+      border-right:2px outset #FFF;
+      border-bottom:2px outset #FFF;
+      border-left:2px outset #FFF;
+    }
+      td.col0{
+        border-left:none;
+      }
+  tr:last-child td{
+    border-bottom:0 none #FFF;
+  }
+
+/* Table des mati√®res */
+
+#dw__toc {
+    position:relative;
+    float:right;
+    margin-left:1em;
+    width:18em; height:auto;
+    border-radius:0 8px 8px 8px;
+    -moz-border-radius:0 8px 8px 8px;
+    -o-border-radius:0 8px 8px 8px;
+    -khtml-border-radius:0 8px 8px 8px;
+    /* Chrome - Safari */
+    -webkit-border-top-right-radius:8px;
+    -webkit-border-bottom-right-radius:8px;
+    -webkit-border-bottom-left-radius:8px;
+    border-right:1px outset #D2D2D2;
+    border-bottom:1px outset #D2D2D2;
+}
+
+#dw__toc h3.toggle {
+    position:relative;
+    margin:-4px 0 0 -4px; padding:0.5em 0 0 4em;
+    background-color:transparent; background-position:top left; background-repeat:no-repeat;
+    height:45px;
+    font-size:0.87em;
+    font-weight:bold;
+}
+
+#dw__toc .open span, #dw__toc .closed span {
+    display:block;
+    margin:1.1em 0 0 0.75em;
+    width:14px; height:14px;
+    background:transparent url('../images/commun/bt_open_close.png') 50% 0 repeat-y;
+    text-indent:-9000px;
+    position: absolute; top: 0px; left: 0px;
+}
+
+#dw__toc .closed span {
+    background-position: 50% -14px;
+}
+
+#dw__toc > div {
+    margin-top:-1.8em;
+    border-top:1px solid #F6F6F6;
+}
+
+#dw__toc ul.toc{
+    margin-left:1.2em;
+    list-style:none;
+}
+#dw__toc ul.toc ul {
+    margin-top:0.2em;
+    margin-left:1em;
+    margin-bottom:0.2em;
+}
+#dw__toc ul.toc li {
+    position:relative; z-index:1;
+    padding: 0px;
+    line-height:1.4em;
+    font-size:0.9em;
+}
+#dw__toc .toc li li {
+    font-size:1em;
+}
+  
+#dw__toc li.level1{
+    counter-reset:sousmenus;
+}
+#dw__toc li.level1 > div:before {
+    padding-right:0.2em;
+    counter-increment:menus;
+    content:counter(menus)".";
+}
+
+#dw__toc li.level2 > div:before {
+    counter-increment:sousmenus;
+    content:counter(menus) "." counter(sousmenus) "  ";
+}
+/* fin - Table des mati√®res */
+
+/* Effet de num√©rotation des sections */
+
+#main > h2{
+    counter-reset:soussection;
+    padding-right:0.2em;
+    counter-increment:section;
+}
+#main > h2:before {
+    content:counter(section) ". ";
+}
+
+#main > h3 {
+    counter-increment:soussection;
+    counter-reset:soussoussection paragraphe sousparagraphe;
+}
+#main > h3:before {
+  content:counter(section) "." counter(soussection) "  ";
+}
+
+/* Fin - Effet de num√©rotation */
+
+.notehelp{
+  
+}
+#navbar
+{
+    margin-top:-1px;
+}
+
+/* Style sp√©cifique */
+
+pre.code, pre.file{
+  padding:0.2em 1em;
+  background-color:#D4D4D4;
+  border-top:1px solid #313131;
+  border-left:4px solid #313131;
+  color:#000;
+  font-family:monospace !important;
+  overflow:auto;
+}
+pre.file{
+  background-color:white;
+  border-right:1px solid #313131;
+  border-bottom:1px solid #313131;
+}
+  dl.code dt, dl.file dt{
+    margin:0 0 0 2em; padding:4px;
+    display:inline;
+    border-top:1px solid #313131;
+    border-right:1px solid #313131;
+    border-left:1px solid #313131;
+    -moz-border-radius:6px 6px 0 0;
+    -o-border-radius:6px 6px 0 0;
+    -khtml-border-radius:6px 6px 0 0;
+    /* Chrome - Safari */
+    -webkit-border-top-right-radius:6px;
+    -webkit-border-top-left-radius:6px;
+  }
+    dl.code dt{ background-color:#D4D4D4; border-bottom:1px solid #D4D4D4; }
+    dl.file dt{ background-color:#FFF; border-bottom:1px solid #FFF; }
+  dl.code dd, dl.file dd{
+    margin:-9px 0 0;
+  }
+/* Liens communs */
+/* Basique */ 
+#main a.wikilink2{ border-bottom-width:1px; border-bottom-style:dashed; }
+#main a.wikilink2:hover{ border-bottom-style:solid; }
+/* Externe */ 
+#main a.urlextern, #main a.interwiki{ 
+color:blue;}
+#main a.urlextern{ 
+  padding-left:20px;
+  background:transparent url('../images/doc/link_icon.gif') 0 50% no-repeat;
+}
+/* Apt */
+#main a.iw_apt{
+  padding-left:20px;
+  background:transparent url('../images/doc/apt_url.png') 0 50% no-repeat;
+}
+
+/* Liste classique */
+ul{
+  margin-left:1.8em;
+}
+  ul li.level1{
+    padding-left:0.4em;
+  }
+/* Liste num√©rot√©e */
+ol{
+  margin-left:2.2em;
+}
+
+/* Pluggin box */
+.box_content div.box{
+  margin-right:0; margin-left:1em;
+}
+
+
+
+/* Edition */
+#tool__bar{
+  margin-left:0.8em; margin-bottom:-0.2em; padding-left:0.4em; padding-right:0.4em;
+  width:98%;
+  background:#f6f6f6 url('../images/commun/menu_c.png') bottom left repeat-x;
+  border:1px solid #BEC0C0;
+  border-bottom:0 none #FFF;
+  border-radius:0.4em 0.4em 0 0;
+  -moz-border-radius:0.4em 0.4em 0 0;
+  -o-border-radius:0.4em 0.4em 0 0;
+  -khtml-border-radius:0.4em 0.4em 0 0;
+}
+  #tool__bar button{
+    padding:0.2em 0.4em 0;
+    background:#f6f6f6 url('../images/commun/menu_c.png') bottom left repeat-x;
+    border:0 none #FFF;
+  }
+    #tool__bar button:hover{
+      background-color:#CCC;
+      background-image:none;
+    }
+    #tool__bar button img{
+      
+    }
+#dw__editform{
+  margin-left:0.8em;
+}
+  #wiki__text{
+    padding:0.4em 0.78em;
+    width:98%;
+    border:1px solid #AAA;
+  }
+  #wiki__editbar{
+    margin-top:-0.2em; padding:0.4em 0.78em 0.2em;
+    width:98%;
+    background:#f6f6f6 url('../images/commun/menu_c.png') bottom left repeat-x;
+    border:1px solid #BEC0C0;
+    border-top:0 none #FFF;
+    border-radius:0 0 0.4em 0.4em;
+    -moz-border-radius:0 0 0.4em 0.4em;
+    -o-border-radius:0 0 0.4em 0.4em;
+    -khtml-border-radius:0 0 0.4em 0.4em;
+  }
+  #wiki__editbar:after{ content:''; display:block; clear:both; }
+  
+    #wiki__editbar div{
+      height:1.8em;
+    }
+    #size__ctl{
+      float:right;
+    }
+    #wiki__editbar .editButtons{
+      float:left;
+      margin-right:2em;
+    }
+      #wiki__editbar .editButtons input{
+        border-width:1px;
+        border-style:outset;
+        border-color:#AAA #FFF #FFF #AAA;
+        border-radius:0.4em;
+        -moz-border-radius:0.4em;
+        -o-border-radius:0.4em;
+        -khtml-border-radius:0.4em;
+      }
+    #wiki__editbar .summary{
+      float:left;
+    }
+      #edit__summary{
+        padding-left:0.6em; padding-right:0.6em;
+        width:20em;
+        border-width:1px;
+        border-style:inset;
+        border-color:#AAA #FFF #FFF #AAA;
+        border-radius:1em;
+        -moz-border-radius:1em;
+        -o-border-radius:1em;
+        -khtml-border-radius:1em;
+      }
+      .license{
+        padding-top:1em;
+        font-size:0.85em;
+      }
+
+
+/* Toolbar - √©dition */
+.picker{
+  padding:0.2em;
+  background-color:#EBECED;
+  border:1px solid gray;
+  border-radius:0 0 0.4em 0.4em;
+  -moz-border-radius:0 0 0.4em 0.4em;
+  -o-border-radius:0 0 0.4em 0.4em;
+  -khtml-border-radius:0 0 0.4em 0.4em;
+}
+  .picker button{
+    padding:0.2em 0.4em 0;
+    background-color:transparent;
+    border:0 none #FFF;
+    cursor:pointer;
+  }
+  .picker button:hover{
+    background-color:#CCC;
+  }
+/* emoticons */
+#picker1{
+  width:14.8em;
+}
+/* caract√®res sp√©ciaux */
+
+#draft__status{
+  margin-left:1.6em;
+  color:red;
+  font-weight:bold;
+}
+/* Assistant lien */
+#link__wiz{
+  border-radius:0.4em;
+  -moz-border-radius:0.4em;
+  -o-border-radius:0.4em;
+  -khtml-border-radius:0.4em;
+}
+
+#insitu__fn{
+  margin-top:-3em; margin-left:-1em; padding:0.2em 0.4em;
+  max-width:30%;
+  background-color:#FFF;
+  border-width:1px;
+  border-style:solid;
+  border-radius:0.4em;
+  -moz-border-radius:0.4em;
+  -o-border-radius:0.4em;
+  -khtml-border-radius:0.4em;
+  z-index: 1;
+}
+
+/* Tags */
+div.dokuwiki div.tags{
+  border-top:0 none #FFF;
+  font-size:inherit;
+  text-align:left;
+  clear:left;
+}
+  div.dokuwiki div.tags span{
+    background-image:url('../images/doc/tag.gif');
+    background-position:0px 3px;
+  }
+
+/* Images */
+img.medialeft{ margin-right:0.5em; }
+img.mediaright{ margin-left:0.5em; }
+
+/* Citations */
+#main blockquote {
+    border-left: 4px solid #d4d4d4;
+    padding-left: 1em;
+    margin-left: 1em;
+}
+;@T√3      X5ÜõX5Üõ=$RÙX5⁄¸   ?    :https://www-static.ubuntu-fr.org/theme2010/css/doc-general.css necko:classified 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAQAAgAAAAAAAAAAAAAAAAAAAAAB4vFIJp5wRkeyPxAQ9RJGKPqbqVvKO0mKuIl8ec8o/uhmCjImkVxP+7sgiYWmMt8F+O2DZM7ZTG6GukivU8OT5gAAAAAAAAYDMIIF/zCCBOegAwIBAgIQE+4zJaE1dfPbVTmMoPuVtjANBgkqhkiG9w0BAQsFADBfMQswCQYDVQQGEwJGUjEOMAwGA1UECBMFUGFyaXMxDjAMBgNVBAcTBVBhcmlzMQ4wDAYDVQQKEwVHYW5kaTEgMB4GA1UEAxMXR2FuZGkgU3RhbmRhcmQgU1NMIENBIDIwHhcNMTYwNTE5MDAwMDAwWhcNMTcwNTE5MjM1OTU5WjBjMSEwHwYDVQQLExhEb21haW4gQ29udHJvbCBWYWxpZGF0ZWQxJDAiBgNVBAsTG0dhbmRpIFN0YW5kYXJkIFdpbGRjYXJkIFNTTDEYMBYGA1UEAwwPKi51YnVudHUtZnIub3JnMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAzvx0qIWDyIYyDDCBOKQgQut42YulQuLPH0SVkHJNW8lKxfYnGcxfYnrId/hcQej93Z9x7KHavfVTiDK7Gf2+G3iMlRBPqrJAHivCOlQdSrwu6U+1UIRJg3bAvCqqlScR6rkhy1iP84AaHKu3REGiUpOJdc7K+9W1tubejmptwfkePDCoLRgV3qU2VZz8URLym0hA/USLLVOBFJ8d/MDQNPMagKvKNF0SomG0I2WTgg3/D8yIaxQLzqiKk+lZZF47wRWeWHz94kWDOhyqGJCGmNI6+bksqOl40D00V2B5eepPDQNQjjlUuoUOcgLU6X1TWLNKdkYceALK7lQImR3Z0suvT3ZXBXpS4hbTPSAGcMbECEMEEjaSIZBBSbIZ7pcAD2cLTMDKp3twieRHXE8PtexQkS2P5z3IKjGpSRnwkrWXRWYGtXoSxGpIaOaGLuH4KMUzd7xOG3kIVQi0GhOa0FhlB0OvBsvrBn3sjhlsuaclFf0P/nwZeXJs9rkj7iNDS4GwrU2zQ/4lYt3KF0WwK6ZTDCtvQ/wYJhgPMtaANtxa3v5qLOPMqyTWgDL4+5UCXblUlIGDKJh9pE4rgVJQC+qSb93GhFK36F64n6NbllGFBccrkq1p2Hh/5HKN+QGdRFB5D4L1/sZlg4hOV9zXZjEaPebKohTASTYZnhFMe1UCAwEAAaOCAbEwggGtMB8GA1UdIwQYMBaAFLOQp9jJr07NYTyffK1df0H9aTDqMB0GA1UdDgQWBBQbI/Jy69OmYQ7GXH0sVAk4g3awVDAOBgNVHQ8BAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwSwYDVR0gBEQwQjA2BgsrBgEEAbIxAQICGjAnMCUGCCsGAQUFBwIBFhlodHRwczovL2Nwcy51c2VydHJ1c3QuY29tMAgGBmeBDAECATBBBgNVHR8EOjA4MDagNKAyhjBodHRwOi8vY3JsLnVzZXJ0cnVzdC5jb20vR2FuZGlTdGFuZGFyZFNTTENBMi5jcmwwcwYIKwYBBQUHAQEEZzBlMDwGCCsGAQUFBzAChjBodHRwOi8vY3J0LnVzZXJ0cnVzdC5jb20vR2FuZGlTdGFuZGFyZFNTTENBMi5jcnQwJQYIKwYBBQUHMAGGGWh0dHA6Ly9vY3NwLnVzZXJ0cnVzdC5jb20wKQYDVR0RBCIwIIIPKi51YnVudHUtZnIub3Jngg11YnVudHUtZnIub3JnMA0GCSqGSIb3DQEBCwUAA4IBAQAmdMKGtZgr4iJhhh6jRb1vHAFXwG9sYsw6DzATyhXruZHbJNWUJbpu3Ugo0r//e+DrNfC1fJBikaypQSZH7pyPoNlz4dAi5Sf6oWqyWcVPvVshO1Je7mRKm81gAHh+bPt/pkhcCS8LxfdJcXAkuwhdvSaIShUt8pYxsFkX0+VIO6Lo2zZszhs798ev695J6czrdMfl3tkIDZFAVjHj5TUWjNo1I3A5wVFxw41NhRs9KWj3gmUIP87aus/UfQslSjuT/zmFRaf5Rt2HGmQU/OAxCKqL0y/OIOhWDii7yvcDr7aE8AjAozR17twAvZDvpJlYOnxUP//osaZlEeDOa6lywC8AAwAAAAABAQAA request-method GET response-head HTTP/1.1 200 OK
+Server: nginx/1.10.2
+Date: Wed, 23 Nov 2016 19:42:31 GMT
+Content-Type: text/css
+Content-Length: 13794
+Last-Modified: Mon, 21 Nov 2016 07:40:18 GMT
+Etag: "5832a4e2-35e2"
+Accept-Ranges: bytes
+ uncompressed-len 0   5‚
